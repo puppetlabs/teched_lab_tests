@@ -5,6 +5,7 @@
 1. [Description](#description)
 1. [Requirements](#requirements)
 1. [Usage](#usage)
+1. [Development](#usage)
 
 ## Description
 
@@ -27,3 +28,18 @@ You will use PDK to run the tests in this module. All commands should go through
 
     # To run localhost tests
     pdk bundle exec rspec spec/localhost
+
+
+## Development
+
+### Writing Tests
+
+For a localhost test, create a new *_spec.rb file under spec/localhost
+and add a header to include the [spec_helper.rb file](spec/spec_helper.rb).
+
+In the header, also configure the serverspec back end to use whatever service
+you plan to execute your tests with. For example, to execute locally on a Linux host:
+
+```require 'spec_helper'
+```set :backend, :exec
+
