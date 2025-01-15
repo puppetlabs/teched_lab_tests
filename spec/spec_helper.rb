@@ -11,7 +11,6 @@ require 'rspec-puppet-facts'
 
 # Serverspec
 require 'serverspec'
-set :backend, :exec # Set backend to exec for Linux localhost tests
 
 require 'spec_helper_local' if File.file?(File.join(File.dirname(__FILE__), 'spec_helper_local.rb'))
 

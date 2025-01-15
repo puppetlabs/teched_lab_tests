@@ -1,28 +1,29 @@
 require 'spec_helper'
+set :backend, :exec # Set backend to exec for Linux localhost tests
 
-describe package('httpd'), :if => os[:family] == 'redhat' do
-  it { should be_installed }
+describe package('httpd'), if: os[:family] == 'redhat' do
+  it { is_expected.to be_installed }
 end
 
-describe package('apache2'), :if => os[:family] == 'ubuntu' do
-  it { should be_installed }
+describe package('apache2'), if: os[:family] == 'ubuntu' do
+  it { is_expected.to be_installed }
 end
 
-describe service('httpd'), :if => os[:family] == 'redhat' do
-  it { should be_enabled }
-  it { should be_running }
+describe service('httpd'), if: os[:family] == 'redhat' do
+  it { is_expected.to be_enabled }
+  it { is_expected.to be_running }
 end
 
-describe service('apache2'), :if => os[:family] == 'ubuntu' do
-  it { should be_enabled }
-  it { should be_running }
+describe service('apache2'), if: os[:family] == 'ubuntu' do
+  it { is_expected.to be_enabled }
+  it { is_expected.to be_running }
 end
 
-describe service('org.apache.httpd'), :if => os[:family] == 'darwin' do
-  it { should be_enabled }
-  it { should be_running }
+describe service('org.apache.httpd'), if: os[:family] == 'darwin' do
+  it { is_expected.to be_enabled }
+  it { is_expected.to be_running }
 end
 
 describe port(80) do
-  it { should be_listening }
+  it { is_expected.to be_listening }
 end
