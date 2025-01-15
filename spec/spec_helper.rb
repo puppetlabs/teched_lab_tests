@@ -1,5 +1,3 @@
-# Copyright 2025. Puppet, Inc., a Perforce company.
-#
 # frozen_string_literal: true
 
 RSpec.configure do |c|
