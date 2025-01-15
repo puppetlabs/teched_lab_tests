@@ -29,7 +29,6 @@ You will use PDK to run the tests in this module. All commands should go through
     # To run localhost tests
     pdk bundle exec rspec spec/localhost
 
-
 ## Development
 
 ### Writing Tests
