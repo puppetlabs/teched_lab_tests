@@ -1,0 +1,7 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Install PDK on Ubuntu or Rocky Linux",
+  "parameters": {
+  }
+}
