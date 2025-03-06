@@ -4,7 +4,6 @@
 # This task runs a test locally from the spec/localhost directory
 if [ -f "spec/localhost/$PT_spec" ]; then
   echo "Running test $PT_spec"
-  pdk bundle install
   pdk bundle exec rspec spec/localhost/$PT_spec
 else
   echo "Test $PT_spec not found"
