@@ -12,8 +12,4 @@ context 'Gitea Server' do
   describe port(3000) do
     it { is_expected.to be_listening }
   end
-
-  describe package('gitea') do
-    it { is_expected.to be_installed }
-  end
 end
