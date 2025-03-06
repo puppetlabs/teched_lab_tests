@@ -7,10 +7,10 @@
 # @summary A plan created with bolt plan new.
 # @param targets The targets to run on.
 plan teched_lab_tests::run_local_spec (
-  TargetSpec $targets = "localhost",
+  TargetSpec $targets = 'localhost',
   String $spec_file,                      # A spec file in the spec/localhost/ directory
 ) {
-  $spec_dir = "spec/localhost"
+  $spec_dir = 'spec/localhost'
   $spec_path = "${spec_dir}/${spec_file}"
   if !file_exists($spec_path) {
     fail("Spec file '${spec_file}' not found in '${spec_dir}'")
