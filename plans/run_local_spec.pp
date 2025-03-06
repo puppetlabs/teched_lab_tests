@@ -10,10 +10,6 @@ plan teched_lab_tests::run_local_spec (
   $spec_dir = 'spec/localhost'
   $spec_path = "${spec_dir}/${spec_file}"
 
-  if ! file::exists($spec_path) {
-    fail("Spec file '${spec_file}' not found in '${spec_dir}'")
-  }
-
   run_task('install_ruby', $targets)
   run_task('install_pdk', $targets)
   run_task('bundle_install', $targets)
