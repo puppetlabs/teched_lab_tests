@@ -1,0 +1,11 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Run a spec from spec/localhost",
+  "parameters": {
+    "spec": {
+      "description": "The spec file to run",
+      "type": "String[1]"
+    }
+  }
+}
