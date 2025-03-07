@@ -10,8 +10,8 @@ plan teched_lab_tests::run_local_spec (
   $spec_dir = 'spec/localhost'
   $spec_path = "${spec_dir}/${spec_file}"
 
-  run_task('install_ruby', $targets)
-  run_task('install_pdk', $targets)
-  run_task('bundle_install', $targets)
-  run_task('run_local_spec', $targets, 'spec_file' => $spec_file)
+  run_task('teched_lab_tests::install_ruby', $targets)
+  run_task('teched_lab_tests::install_pdk', $targets)
+  run_task('teched_lab_tests::bundle_install', $targets)
+  run_task('teched_lab_tests::run_local_spec', $targets, 'spec_file' => $spec_file)
 }
