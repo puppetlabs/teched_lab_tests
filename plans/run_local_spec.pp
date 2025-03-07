@@ -2,7 +2,7 @@
 #
 # @summary A plan to run spec tests locally on each node.
 # @param targets The targets to run on.
-# @param spec_file The spec file to run. This must be a file in the spec/localhost directory.
+# @param spec The spec file to run. This must be a file in the spec/localhost directory.
 plan teched_lab_tests::run_local_spec (
   TargetSpec $targets = 'localhost',
   String $spec,                           # A spec file in the spec/localhost/ directory
